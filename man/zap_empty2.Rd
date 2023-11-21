@@ -21,12 +21,12 @@ of a data frame with NA.
 \examples{
 load("data/ae.rda")
 
-zap_empty2(ae,AETERM)
+t <- zap_empty2(ae,AETERM)
 
-zap_empty2(ae,AETERM,AEREL)
+t <- zap_empty2(ae,AETERM,AEREL)
 
-zap_empty2(ae,AETERM.AEREL)
+t <- zap_empty2(ae,AETERM.AEREL)
 
-zap_empty2(ae)
+t <- zap_empty2(ae)
 }
 \keyword{internal}

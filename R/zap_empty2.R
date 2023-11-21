@@ -8,20 +8,19 @@
 #' @param ...  specific columns names of `.data`,If ignored, select all columns.
 #' @return A data frame
 #' @import rlang
-#' @import purrr
-#' @import dplyr
+#' @importFrom purrr map
 #' @export
 #' @keywords internal
 #' @examples
 #' load("data/ae.rda")
 #'
-#' zap_empty2(ae,AETERM)
+#' t <- zap_empty2(ae,AETERM)
 #'
-#' zap_empty2(ae,AETERM,AEREL)
+#' t <- zap_empty2(ae,AETERM,AEREL)
 #'
-#' zap_empty2(ae,AETERM.AEREL)
+#' t <- zap_empty2(ae,AETERM.AEREL)
 #'
-#' zap_empty2(ae)
+#' t <- zap_empty2(ae)
 
 zap_empty2 <- function(.data,...){
 
@@ -44,22 +43,15 @@ zap_empty2 <- function(.data,...){
       chrcols <- as.character(cols_select)
     }
     else {
-      chrcols <- names(select_if(.data,is.character))
+      chrcols <- names(.data)
     }
 
     for (chrcol in chrcols){
-      .data[[chrcol]] <- na_if(.data[[chrcol]],"")
+      # .data[[chrcol]] <- na_if(.data[[chrcol]],"")
+
+      stopifnot(is.character(.data[[chrcol]]))
+      .data[[chrcol]][.data[[chrcol]] == ""] <- NA
     }
     return(.data)
   }
 }
-
- # load("data/ae.rda")
- #
- # zap_empty2(ae,AETERM)
- #
- # zap_empty2(ae,AETERM,AEREL)
- #
- # zap_empty2(ae,AETERM.AEREL)
- #
- # zap_empty2(ae)

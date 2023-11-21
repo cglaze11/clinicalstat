@@ -41,6 +41,6 @@ library(clinicalstat)
 ### 批量替换空值为NA
 
 ```{r}
-zap_empty2(ae,AETERM)
+head(zap_empty2(ae,AETERM),20)
 ```
 

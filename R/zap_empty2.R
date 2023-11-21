@@ -12,13 +12,10 @@
 #' @export
 #' @keywords internal
 #' @examples
-#' load("data/ae.rda")
 #'
 #' t <- zap_empty2(ae,AETERM)
 #'
 #' t <- zap_empty2(ae,AETERM,AEREL)
-#'
-#' t <- zap_empty2(ae,AETERM.AEREL)
 #'
 #' t <- zap_empty2(ae)
 
@@ -55,3 +52,6 @@ zap_empty2 <- function(.data,...){
     return(.data)
   }
 }
+
+# load("data/ae.rda")
+# t <- zap_empty2(ae,AETERM.AEREL)

@@ -46,8 +46,9 @@ zap_empty2 <- function(.data,...){
     for (chrcol in chrcols){
       # .data[[chrcol]] <- na_if(.data[[chrcol]],"")
 
-      stopifnot(is.character(.data[[chrcol]]))
-      .data[[chrcol]][.data[[chrcol]] == ""] <- NA
+      if (is.character(.data[[chrcol]])) {
+        .data[[chrcol]][.data[[chrcol]] == ""] <- NA
+      }
     }
     return(.data)
   }

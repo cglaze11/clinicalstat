@@ -1,0 +1,27 @@
+---
+title: "zap_empty2"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{zap_empty2}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(clinicalstat)
+```
+
+```{r}
+(t <- zap_empty2(ae,AETERM))
+
+(t <- zap_empty2(ae,AETERM,AEREL))
+
+(t <- zap_empty2(ae))
+```

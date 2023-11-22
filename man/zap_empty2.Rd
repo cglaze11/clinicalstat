@@ -26,4 +26,3 @@ t <- zap_empty2(ae,AETERM,AEREL)
 
 t <- zap_empty2(ae)
 }
-\keyword{internal}

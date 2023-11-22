@@ -10,7 +10,6 @@
 #' @import rlang
 #' @importFrom purrr map
 #' @export
-#' @keywords internal
 #' @examples
 #'
 #' t <- zap_empty2(ae,AETERM)

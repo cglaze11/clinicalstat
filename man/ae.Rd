@@ -3,11 +3,11 @@
 \docType{data}
 \name{ae}
 \alias{ae}
-\title{Adverse event data}
+\title{Adverse event}
 \format{
 \subsection{\code{ae}}{
 
-A data frame with 46 rows and 25 columns:
+A data frame with 46 rows and 10 columns:
 \describe{
 \item{country}{Country name}
 \item{iso2, iso3}{2 & 3 letter ISO country codes}
@@ -16,10 +16,13 @@ A data frame with 46 rows and 25 columns:
 }
 }
 }
+\source{
+\url{https://www.who.int/teams/global-tuberculosis-programme/data}
+}
 \usage{
 ae
 }
 \description{
-Adverse event data
+Adverse event
 }
-\keyword{datasets}
+\keyword{internal}

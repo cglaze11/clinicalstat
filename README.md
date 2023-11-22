@@ -25,22 +25,21 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(clinicalstat)
-## basic example code
 ```
 
 ### 批量替换空值为NA
 
 ``` r
 head(zap_empty2(ae,AETERM),10)[1:4]
-#>    USUBJID                 AETERM        AETERM_d   AETERM_SOC
-#> 1  001S002             血尿酸升高 MedDRA/C [25.1]     各类检查
-#> 2  001S003                   <NA>                             
-#> 3  001S005             血尿酸升高 MedDRA/C [25.1]     各类检查
-#> 4  001S007       血白细胞计数降低 MedDRA/C [25.1]     各类检查
-#> 5  001S007 血中性粒细胞绝对值降低 MedDRA/C [25.1]     各类检查
-#> 6  001S007 血中性粒细胞绝对值降低 MedDRA/C [25.1]     各类检查
-#> 7  001S007                   腹痛 MedDRA/C [25.1] 胃肠系统疾病
-#> 8  001S008                   <NA>                             
-#> 9  001S018                   <NA>                             
-#> 10 001S021                   <NA>
+#>    USUBJID TRTP                 AETERM          SOC
+#> 1  001S002    1             血尿酸升高     各类检查
+#> 2  001S003    2                   <NA>             
+#> 3  001S005    2             血尿酸升高     各类检查
+#> 4  001S007    2       血白细胞计数降低     各类检查
+#> 5  001S007    2 血中性粒细胞绝对值降低     各类检查
+#> 6  001S007    2 血中性粒细胞绝对值降低     各类检查
+#> 7  001S007    2                   腹痛 胃肠系统疾病
+#> 8  001S008    1                   <NA>             
+#> 9  001S018    1                   <NA>             
+#> 10 001S021    2                   <NA>
 ```

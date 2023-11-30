@@ -2,4 +2,3 @@
 
 export(zap_empty2)
 import(rlang)
-importFrom(purrr,map)

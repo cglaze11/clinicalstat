@@ -21,7 +21,7 @@ devtools::install_github("cglaze11/clinicalstat")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to solve a common problem :
 
 ``` r
 library(clinicalstat)

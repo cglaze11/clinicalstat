@@ -31,7 +31,7 @@ devtools::install_github("cglaze11/clinicalstat")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to solve a common problem :
 
 ```{r example}
 library(clinicalstat)
@@ -41,5 +41,6 @@ library(clinicalstat)
 
 ```{r}
 head(zap_empty2(ae,AETERM),10)[1:4]
+
 ```
 
